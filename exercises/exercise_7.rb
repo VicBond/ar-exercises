@@ -23,3 +23,11 @@ class Store < ActiveRecord::Base
   validates :name, length: { minimum: 3 }
   validates :annual_revenue, numericality: {greater_than_or_equal: 0}
 end
+
+puts "Enter the store name:"
+@store_name = gets.chomp
+
+store42 = Store.create(name: @store_name)
+
+store42.valid?
+puts store.errors.full_messages
