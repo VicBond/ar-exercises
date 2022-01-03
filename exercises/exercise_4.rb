@@ -18,3 +18,6 @@ store6.save
 
 @mens_stores = Store.where(mens_apparel: true)
 
+@mens_stores.each do |i|
+  puts "Store '#{i.name}' has annual revenue of #{i.annual_revenue}$."
+end
